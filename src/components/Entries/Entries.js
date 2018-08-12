@@ -11,22 +11,22 @@ class Entries extends React.Component{
     otraFuncion = (e) =>{
         e.preventDefault();
         console.log('Presionaste Enter')
-        console.log('El valor de la variable es: ' + this.state.inputValue)
+        console.log('El valor de la variable es: ' + this.taskTexto.value)
     }
 
-    getValueInput = (e) =>{
-        var texto = e.target.value;
+    // getValueInput = (e) =>{
+    //     var texto = e.target.value;
 
-        this.setState({
-            inputValue: texto,
-        })
-    }
+    //     this.setState({
+    //         inputValue: texto,
+    //     })
+    // }
 
     render() {
       return (
         <div>
             <form onSubmit={this.otraFuncion}>
-                <input type="text" value={this.state.inputValue} onChange={this.getValueInput}  placeholder="Write your task here"></input>
+                <input type="text" ref={(taskTexto) => { this.taskTexto = taskTexto }}  placeholder="Write your task here"></input>
             </form>
         </div>
       )
