@@ -11,8 +11,8 @@ class Single extends React.Component{
             <div className = "single__task">
                 <p>{this.props.task}</p>
             </div>
-            <div class="single__icon">
-                <i onClick={this.props.function}  class="material-icons">close</i>
+            <div className="single__icon">
+                <i onSelect={this.props.delete}  className="material-icons">close</i>
             </div>
         </div>
       )
