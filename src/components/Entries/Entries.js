@@ -11,7 +11,7 @@ class Entries extends React.Component{
         }
     }
 
-    addTask = (e) =>{
+    addTask = (e) => {
         e.preventDefault();
         //TASK INTRODUCIDA
         var newTask = this.taskTexto.value.trim();

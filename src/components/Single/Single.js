@@ -2,6 +2,11 @@ import React from 'react';
 import './single.css'
 
 class Single extends React.Component{
+
+    mensaje = (e) =>{
+        console.log("From single element")
+    }
+
     render() {
       return (
         <div className = "single">
@@ -12,7 +17,7 @@ class Single extends React.Component{
                 <p>{this.props.task}</p>
             </div>
             <div className="single__icon">
-                <i onSelect={this.props.delete}  className="material-icons">close</i>
+                <button onClick={() => this.mensaje()}><i className="material-icons">close</i></button>
             </div>
         </div>
       )
