@@ -3,8 +3,9 @@ import './single.css'
 
 class Single extends React.Component{
 
-    mensaje = (e) =>{
-        console.log("From single element")
+    deleteElements = (e) =>{
+        e.target.parentNode.outerHTML = null
+        console.log(e.target.parentNode)
     }
 
     render() {
@@ -16,9 +17,9 @@ class Single extends React.Component{
             <div className = "single__task">
                 <p>{this.props.task}</p>
             </div>
-            <div className="single__icon">
-                <button onClick={() => this.mensaje()}><i className="material-icons">close</i></button>
-            </div>
+            
+            <button onClick={this.deleteElements}><i className="material-icons">close</i></button>
+            
         </div>
       )
     }
